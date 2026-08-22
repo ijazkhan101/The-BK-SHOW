@@ -1,6 +1,6 @@
 THE BK SHOW — website (v4, neon poster theme)
 =============================================
-
+https://thebkshow.netlify.app/#shows
 FILES
   index.html         Home — format, run of the evening, the rounds, tickets
   sponsorship.html   Packages, screen inventory, named rounds, enquiry form
