@@ -461,6 +461,82 @@ footer p{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(
 .portrait-xl .tickets-left{bottom:auto;top:30px;left:-14px}
 @media (max-width:900px){.portrait-xl .tickets-left{top:20px;left:0}}
 
+/* ================================================================
+   NEON POSTER THEME — colours sampled from the BK Show artwork
+   cyan tube #3FE3F2 · pink tube #FF2EC4 · violet-black ground #080018
+   ================================================================ */
+:root{
+  --night:#080018;
+  --deep:#0E0126;
+  --panel:#170436;
+  --panel-2:#200748;
+  --line:rgba(196,150,255,.20);
+  --mist:#AC9DD2;
+  --cloud:#F4EDFF;
+  --violet:#8B2BFF;
+  --electric:#C22BE8;
+  --cyan:#3FE3F2;
+  --pink:#FF2EC4;
+  --grad:linear-gradient(90deg,#FF2EC4,#B23BFF 52%,#3FE3F2);
+}
+
+/* --- neon tube glow on the display type --- */
+h1,h2{ text-shadow:0 0 14px rgba(63,227,242,.35), 0 0 46px rgba(63,227,242,.18); }
+.grad-text{ filter:drop-shadow(0 0 16px rgba(255,46,196,.45)) drop-shadow(0 0 44px rgba(178,59,255,.28)); }
+.mark i{ filter:drop-shadow(0 0 10px rgba(255,46,196,.5)); }
+.hero h1{ text-shadow:0 0 18px rgba(63,227,242,.42), 0 0 60px rgba(63,227,242,.22); }
+.ghost-word{ color:rgba(178,59,255,.05); }
+
+/* --- eyebrows and small caps pick up the cyan tube --- */
+.eyebrow{ color:var(--cyan); text-shadow:0 0 12px rgba(63,227,242,.45); }
+.srow .time{ color:var(--cyan); text-shadow:0 0 12px rgba(63,227,242,.4); }
+.card .n{ color:var(--pink); text-shadow:0 0 12px rgba(255,46,196,.45); }
+.stats b,.stat b{ filter:drop-shadow(0 0 14px rgba(255,46,196,.35)); }
+
+/* --- buttons read as lit tubes --- */
+.btn{ box-shadow:0 0 24px rgba(255,46,196,.30), 0 10px 30px rgba(10,0,30,.55); }
+.btn:hover{ transform:translateY(-2px); box-shadow:0 0 34px rgba(255,46,196,.5), 0 14px 38px rgba(10,0,30,.6); }
+.btn.ghost{ box-shadow:none; border-color:rgba(63,227,242,.38); color:var(--cloud); }
+.btn.ghost:hover{ border-color:var(--cyan); background:rgba(63,227,242,.10); box-shadow:0 0 22px rgba(63,227,242,.30); }
+
+/* --- panels sit on violet-black, edges catch the tubes --- */
+.card{ background:linear-gradient(180deg,rgba(32,7,72,.72),rgba(14,1,38,.30)); }
+.card:hover{ border-color:rgba(255,46,196,.45); box-shadow:0 0 30px rgba(255,46,196,.12); }
+.tier{ background:linear-gradient(180deg,rgba(32,7,72,.68),rgba(14,1,38,.22)); }
+.tier.lead{ border-color:transparent; background:linear-gradient(180deg,rgba(255,46,196,.24),rgba(63,227,242,.07)); }
+.tier li:before{ background:var(--pink); box-shadow:0 0 8px rgba(255,46,196,.7); }
+.tier.entry{ border-color:rgba(63,227,242,.34); }
+.split .box{ background:rgba(32,7,72,.55); }
+.split .box.hi{ background:rgba(32,7,72,.72); border-color:rgba(255,46,196,.42); }
+.screenbox{ background:linear-gradient(180deg,rgba(32,7,72,.62),rgba(14,1,38,.55)); }
+.screenbox .led{ border-color:rgba(63,227,242,.30);
+  background:radial-gradient(120% 150% at 50% 0%,rgba(178,59,255,.34),rgba(8,0,24,.94) 68%); }
+.stats div{ background:var(--night); }
+.biz .logo,.wall span{ background:rgba(32,7,72,.55); }
+
+/* --- badges and pills --- */
+.live-badge{ border-color:rgba(255,46,196,.45); background:rgba(255,46,196,.09);
+  box-shadow:0 0 22px rgba(255,46,196,.18); }
+.live-badge i{ background:var(--pink); box-shadow:0 0 0 0 rgba(255,46,196,.75); }
+.pill.on{ color:#0b0020; }
+.tickets-left{ color:#0b0020; box-shadow:0 12px 30px rgba(255,46,196,.45); }
+
+/* --- ambient glows: pink one side, cyan the other --- */
+.glow.v{ background:rgba(255,46,196,.26); }
+.glow.e{ background:rgba(63,227,242,.20); }
+.hero-bg{ opacity:.28; filter:saturate(.7) hue-rotate(-12deg); }
+
+/* --- frames around the portraits pick up the tube --- */
+.portrait-xl .ring{ box-shadow:0 0 60px rgba(255,46,196,.22); }
+.in-frame,.shot,.hostshot{ border-color:rgba(63,227,242,.30); }
+.plate b{ text-shadow:0 0 14px rgba(63,227,242,.4); }
+
+/* --- rules and dividers --- */
+.rule{ background:linear-gradient(90deg,rgba(255,46,196,0),rgba(255,46,196,.35),rgba(63,227,242,.35),rgba(63,227,242,0)); }
+.faq summary:before{ color:var(--pink); }
+.marquee{ border-color:rgba(196,150,255,.18); }
+.marquee-track b{ color:var(--pink); }
+
 </style>
 </head>
 <body data-page="partners">
@@ -507,7 +583,7 @@ footer p{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(
     <div class="cards rv">
       <div class="card"><h4>Found after the night</h4><p>Guests who saw your presentation on the screen, heard your name from the stage or won your product in a game round come here for your number, your location and your offer.</p></div>
       <div class="card"><h4>Your offer, in writing</h4><p>Each listing carries one offer for BK Show guests &mdash; a discount, free delivery, a first-order deal. Guests mention the show; you get the sale.</p></div>
-      <div class="card"><h4>Ranked by package</h4><p>Platinum sits at the top of the page with a full feature. Gold and Silver follow. Regular and Screen Partners are listed by name, category and city.</p></div>
+      <div class="card"><h4>Ranked by package</h4><p>Diamond sits at the top of the page with a full feature. Gold and Silver follow. Regular and Screen Partners are listed by name, category and city.</p></div>
     </div>
   </div>
 </section>
@@ -543,7 +619,7 @@ footer p{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(
     </div>
     <div class="tbl-scroll rv">
       <table>
-        <thead><tr><th>On your listing</th><th>Platinum</th><th>Gold</th><th>Silver</th><th>Regular</th><th>Screen</th></tr></thead>
+        <thead><tr><th>On your listing</th><th>Diamond</th><th>Gold</th><th>Silver</th><th>Regular</th><th>Screen</th></tr></thead>
         <tbody>
           <tr><td>Business name and city</td><td class="yes">&#9670;</td><td class="yes">&#9670;</td><td class="yes">&#9670;</td><td class="yes">&#9670;</td><td class="yes">&#9670;</td></tr>
           <tr><td>Logo displayed</td><td class="yes">&#9670;</td><td class="yes">&#9670;</td><td class="yes">&#9670;</td><td class="no">&mdash;</td><td class="no">&mdash;</td></tr>
@@ -622,7 +698,7 @@ footer p{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(
 
   /* ==== SAMPLE PARTNERS \u2014 replace with signed partners before launch. ==== */
   var PARTNERS = [
-    {name:"STC", initials:"STC", tier:"Platinum", cat:"Mobile & electronics", city:"Riyadh",
+    {name:"STC", initials:"STC", tier:"Diamond", cat:"Mobile & electronics", city:"Riyadh",
      desc:"Telecom and digital services \u2014 data packages, home internet and business connectivity. Presented on the main screen and named on the quiz round.",
      offer:"Data bundle for every guest who signs up on the night"},
     {name:"Zain", initials:"Z", tier:"Gold", cat:"Mobile & electronics", city:"Jeddah",
@@ -667,7 +743,7 @@ footer p{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(
     {name:"Al Barakah Perfumes", initials:"AB", tier:"Screen Partner", cat:"Retail", city:"Jeddah",
      desc:"Attar, oud and gift sets, supplying the prize for one game round each edition.",
      offer:"Buy two, get one free for show guests"},
-    {name:"Your business here", initials:"P", tier:"Platinum", cat:"Open", city:"Riyadh", desc:"The Platinum position is held by one brand per edition \u2014 title billing, the 60-second film on the main screen, a named round and the top of this page.", offer:"Reserve this position", open:true},
+    {name:"Your business here", initials:"P", tier:"Diamond", cat:"Open", city:"Riyadh", desc:"The Diamond position is held by one brand per edition \u2014 title billing, the 60-second film on the main screen, a named round and the top of this page.", offer:"Reserve this position", open:true},
     {name:"Your business here", initials:"G", tier:"Gold", cat:"Open", city:"Jeddah", desc:"Gold partners get a 30-second presentation on the main screen, logo, description and a direct WhatsApp button here.", offer:"Two Gold places per edition", open:true},
     {name:"Your business here", initials:"S", tier:"Screen Partner", cat:"Open", city:"Dammam", desc:"The entry package \u2014 your profile slide on the main screen, your name read from the stage, and a listing here with your offer.", offer:"From SAR 3,000 per edition", open:true}
   ];

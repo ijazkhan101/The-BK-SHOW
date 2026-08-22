@@ -1,5 +1,5 @@
-THE BK SHOW — website (v3, screen-first format)
-================================================
+THE BK SHOW — website (v4, neon poster theme)
+=============================================
 
 FILES
   index.html         Home — format, run of the evening, the rounds, tickets
@@ -34,6 +34,21 @@ WHAT CHANGED FROM THE PREVIOUS SITE
     the floor and the host makes introductions.
   - Ticket SAR 100 with tiers  ->  one flat SAR 50 for every seat.
   - Entry tier is Screen Partner at SAR 3,000.
+  - Tiers now match the print flyer and the decks: Diamond SAR 25,000,
+    Gold 15,000, Silver 10,000, Regular 5,000, Screen Partner 3,000.
+    Single figures, no ranges. "Platinum" is gone.
+
+COLOUR THEME — sampled from the BK Show poster
+  Ground        #080018  violet-black
+  Deep panel    #0E0126 / #170436
+  Neon cyan     #3FE3F2
+  Neon pink     #FF2EC4
+  Gradient      pink -> violet -> cyan (#FF2EC4 / #B23BFF / #3FE3F2)
+
+  Headings, buttons and badges carry a soft tube glow so the type reads as
+  lit neon rather than flat colour. The theme block sits at the very END of
+  the <style> section in each page, marked "NEON POSTER THEME" — it
+  overrides the older blue palette above it, so edit there, not higher up.
   - New: named rounds (BK Quiz, Jackpot, Business Battle, Family Challenge,
     BK Hero, Golden Box) sold as separate sponsor properties.
   - New pages: about.html and contact.html.
